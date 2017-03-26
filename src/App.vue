@@ -1,8 +1,8 @@
-<template>
+ <template>
   <div class="app">
     <div class="app-right">
       <div class="app-right-box">
-        <ul>
+        <ul class="clearfix">
           <li>
             <i class="icon-user-tie"></i>
             <span>关于个人</span>
@@ -31,39 +31,55 @@
 </template>
 
 <script>
-export default {
-  // name: 'app'
-}
+  export default {
+    // name: 'app'
+  }
 </script>
 
 <style lang="less">
   @import './App.less';
   @import './assets/css/icons.css';
+  @import './assets/css/bootstrap.css';
   .app{
+    >div.section{
+      margin-top: 60px;
+      .col-md-2{
+        span{
+          margin-right: 5px;
+        }
+      }
+     }
+    .clearfix:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
     &-right{
-      display: table;
       position: fixed;
       right: 0;
+      left: 0;
       top: 0;
-      height: 100%;
-      width: 50px;
+      width: 100%;
+       z-index: 100;
       &-box{
-        display: table-cell;
-        vertical-align: middle;
         background: rgba(0,0,0,0.8);
-        position: relative;
-        left: 200px;
         >ul{
           width: 100%;
+          padding: 10px 0;
           text-align: center;
           li{
-            margin-bottom: 40px;
+            display: inline-block;
+            padding: 0 10px;
+            margin-right: 10px;
             cursor: pointer;
+            &:last-child{
+              margin: 0;
+             }
             &:hover i{
               opacity: .65;
             }
             i:before{
-              font-size: 30px;
+              font-size: 35px;
               color: #fff;
             }
             span{
