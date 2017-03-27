@@ -4,24 +4,34 @@
       <div class="app-right-box">
         <ul class="clearfix">
           <li>
-            <i class="icon-user-tie"></i>
-            <span>关于个人</span>
+            <a href="#">
+              <i class="icon-user-tie"></i>
+              <span>关于个人</span>
+            </a>
           </li>
           <li>
-            <i class="icon-hammer"></i>
-            <span>专业技能</span>
+            <a href="#Professional">
+              <i class="icon-hammer"></i>
+              <span>专业技能</span>
+            </a>
           </li>
           <li>
-            <i class="icon-stack"></i>
-            <span>我的作品</span>
+            <a href="#Mywork">
+              <i class="icon-stack"></i>
+              <span>我的作品</span>
+            </a>
           </li>
           <li>
-            <i class="icon-envelop"></i>
-            <span>联系方式</span>
+            <a href="#contact">
+              <i class="icon-envelop"></i>
+              <span>联系方式</span>
+            </a>
           </li>
           <li>
-            <i class="icon-heart"></i>
-            <span>兴趣爱好</span>
+            <a href="#Interest">
+              <i class="icon-heart"></i>
+              <span>兴趣爱好</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -42,7 +52,7 @@
   @import './assets/css/bootstrap.css';
   .app{
     >div.section{
-      margin-top: 60px;
+      margin-top: 59px;
       .col-md-2{
         span{
           margin-right: 5px;
@@ -74,6 +84,9 @@
             cursor: pointer;
             &:last-child{
               margin: 0;
+             }
+             >a{
+              display: block;
              }
             &:hover i{
               opacity: .65;

@@ -12,37 +12,28 @@
         </div>
         <ul class="project clearfix">
           <li>
-            <span>
+            <a href="http://jmdbsh.m.huduso.com/w/page" target="_blank">
               <img class="img-responsive" src="../assets/images/website_template7.jpg">
-            </span>
-            <div>
-              <p>江门市电白商会</p>
-              <a href="http://jmdbsh.m.huduso.com/w/page" target="_blank">
-                <img class="img-responsive" src="../assets/images/demo-link.png">
-              </a>
-            </div>
+            </a>
+            <p>
+              <span>江门市电白商会</span>
+            </p>
           </li>
           <li>
-            <span>
+            <a href="http://www.cookabuy.com/" target="_blank">
               <img class="img-responsive" src="../assets/images/logo.52daf91.svg">
-            </span>
-            <div>
-              <p>柯咔网</p>
-              <a href="http://www.cookabuy.com/" target="_blank">
-                <img class="img-responsive" src="../assets/images/demo-link.png">
-              </a>
-            </div>
+            </a>
+            <p>
+              <span>柯咔网</span>
+            </p>
           </li>
           <li>
-            <span>
+            <a href="https://jiujieblue.github.io/AirWar/" target="_blank">
               <img class="img-responsive" src="../assets/images/hero1.png">
-            </span>
-            <div>
-              <p>飞机大战</p>
-              <a href="#" target="_blank">
-                <img class="img-responsive" src="../assets/images/demo-link.png">
-              </a>
-            </div>
+            </a>
+            <p>
+              <span>飞机大战</span>
+            </p>
           </li>
         </ul>
       </div>
@@ -66,6 +57,36 @@ export default {
 body{
   background: #F2F2F2;
 }
+@keyframes fangda{
+  0%  { opacity: 1; }
+  20% { top:0px; width: 100%; height: 100%;left:0px; box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.8);}
+  40% { top:0px; width: 105%; height: 105%; top: -5px; left: -5px; box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.6);}
+  60% { top:0px; width: 110%; height: 110%; top: -10px; left: -10px; box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.4);}
+  80% { top:0px; width: 115%; height: 115%; top: -15px; left: -15px; box-shadow: 0 0 0 16px rgba(0, 0, 0, 0.2);}
+  100% { top:0px; width: 120%; height: 120%; top: -20px; left: -20px; box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);}
+}
+@keyframes xiangs{
+  0% {top: -30px;}
+  10% {top: -50px;}
+  20% {top: -70px;}
+  30% {top: -90px;}
+  40% {top: -110px;}
+  50% {top: -130px;}
+  60% {top: -150px;}
+  70% {top: -170px;}
+  80% {top: -190px;}
+  90% {top: -210px;}
+  100% {top: -230px;}
+}
+.col-md-12{
+  >h3{
+    display: inline-block;
+    >p{
+      margin-top: 5px;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+    }
+  }
+}
 .icon-stack{
   margin-right: 5px;
 }
@@ -77,59 +98,67 @@ body{
   margin: 20px 0;
   >li{
     float: left;
-   width: 20%;
-   >span{
+   position: relative;
+   margin-right: 40px;
+   &:first-child{
+    &{
+      >a:hover:after{
+        /*display: none;*/
+        animation: fangda 1s 1;
+      }
+    }
+    >a{
+      position: relative;
+      &:after{    
+        content: '';
+        position: absolute;
+        box-shadow: 0 0 0 0px #000;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+      }
+      img{
+        border-radius: 50%;
+      }
+    }
+   }
+   &:nth-child(2){
+    >a:hover{
+      >img{
+        transform: rotateY(360deg);
+      }
+    }
+   }
+   &:last-child{
+    >a{
+      overflow: hidden;
+    }
+    >a:hover{
+      img{
+        animation: xiangs .7s 1;
+        animation-fill-mode: backwards;
+      }
+    }
+   }
+   >p{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+   }
+   >a{
     display: table-cell;
-    width: 100%;
-    height: 100%;
-  vertical-align: center;
+     width: 200px;
+     height: 200px;
+  vertical-align: middle;
     >img{
-       width: 100%;
+       max-width: 100%;
+       max-height: 100%;
+       transition: all 0.5s linear;
+       position: relative;
      }
    }
   }
-}
-.project .work img{
-  border-radius: 2em;
-}
-.project .col-md-3{
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.5s linear;
-}
-.project .col-md-3 div a{
-  display: inline-block;
-  margin-top:105%;
-  transition: all 0.5s linear;
-}
-.project .col-md-3 div p{
-  margin-top: -48px;
-  font-size: 1.3em;
-  color: rgb(30, 9, 93);
-  font-weight: 700;
-  transition: all 0.5s linear;
-}
-.project .col-md-3 div{
-  border-radius: 2em;
-  position: absolute;
-  top: 0;left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(65, 85, 115, 0.4);
-  opacity: 0;
-  transition: all 0.5s linear;
-}
-.project .col-md-3:hover{
-  transform: scale(1.1);
-}
-.project .col-md-3 div:hover{
-  opacity: 1;
-}
-.project .col-md-3 div:hover p{
-  margin-top: 34%;
-}
-.project .col-md-3 div:hover a{
-  margin-top: 0;
 }
 </style>
