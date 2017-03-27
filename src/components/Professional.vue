@@ -67,6 +67,10 @@ export default {
     console.log(Javascript + ':' + H)
     /** 绘制圆的函数 **/
     function arc(Id,num1,num2){//传入id、画num%
+      console.log($('#'+Id)[0])
+      if(!$('#'+Id)[0]){
+        return false
+      }
       var ctx=$('#'+Id)[0].getContext('2d');
       ctx.lineWidth='5';
       ctx.strokeStyle='#fff';
@@ -80,7 +84,7 @@ export default {
     }
     var isArc=true;//变量作为判断能否进行绘制圆的动画
     /***   调用周期函数动态绘制圆 ***/
-    function arcSet(Id,i){
+    function arcSet(Id){
       var num=100-obj[Id]; // canvas 空白部分
       var num1= 0,num2=0;
       var ctx=$('#'+Id)[0].getContext('2d');
@@ -89,6 +93,10 @@ export default {
         num1++;
         num2++;
         num1 <= num && (num2 = 0);//判断是否可以进行绘制蓝色条 不可以就令其为零
+        if(!arc(Id, num1, num2)){
+          clearInterval(timer);
+          timer = null;
+        }
         arc(Id, num1, num2);
         ctx.font = '30px SimHei';
         ctx.fillStyle = '#fff';
