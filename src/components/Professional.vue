@@ -12,16 +12,20 @@
           <div class="col-md-9 text-center canvas_box">
             <div class="row">
               <div class="col-md-4 col-sm-6 col-xs-6">
+                <canvas id="React" width="150" height="150" data-toggle="modal" data-target="#AN"></canvas>
+                <br/><span>React</span>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-6">
+                <canvas id="Vue" width="150" height="150" data-toggle="modal" data-target="#AN"></canvas>
+                <br/><span>Vue</span>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-6">
                 <canvas id="Javascript" width="150" height="150" data-toggle="modal" data-target="#JS"></canvas>
                 <br/><span>Javascript</span>
               </div>
               <div class="col-md-4 col-sm-6 col-xs-6">
                 <canvas id="Bootstrap" width="150" height="150" data-toggle="modal" data-target="#BT"></canvas>
                 <br/><span>Bootstrap</span>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-6">
-                <canvas id="AngularJS" width="150" height="150" data-toggle="modal" data-target="#AN"></canvas>
-                <br/><span>AngularJS</span>
               </div>
               <div class="col-md-4 col-sm-6 col-xs-6">
                 <canvas id="HTML_CSS" width="150" height="150" data-toggle="modal" data-target="#HT_CSS"></canvas>
@@ -34,6 +38,10 @@
               <div class="col-md-4 col-sm-6 col-xs-6">
                 <canvas id="JQuery" width="150" height="150" data-toggle="modal" data-target="#JQ"></canvas>
                 <br/><span>JQuery</span>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-6">
+                <canvas id="Zepto" width="150" height="150" data-toggle="modal" data-target="#JQ"></canvas>
+                <br/><span>Zepto</span>
               </div>
             </div>
           </div>
@@ -55,19 +63,19 @@ export default {
   mounted () {
     /** 圆的百分比 **/
     var obj={
+      React: 80,
+      Vue: 85,
       Javascript:70,
       Bootstrap:60,
-      AngularJS:75,
       HTML_CSS:80,
       Photoshop:50,
-      JQuery:85
+      JQuery:85,
+      Zepto: 85
     };
     var W=Javascript.width;
     var H=Javascript.height;
-    console.log(Javascript + ':' + H)
     /** 绘制圆的函数 **/
-    function arc(Id,num1,num2){//传入id、画num%
-      var ctx=$('#'+Id)[0].getContext('2d');
+    function arc(Id,num1,num2,ctx){//传入id、画num%
       ctx.lineWidth='5';
       ctx.strokeStyle='#fff';
       ctx.beginPath();
@@ -80,7 +88,7 @@ export default {
     }
     var isArc=true;//变量作为判断能否进行绘制圆的动画
     /***   调用周期函数动态绘制圆 ***/
-    function arcSet(Id,i){
+    function arcSet(Id){
       var num=100-obj[Id]; // canvas 空白部分
       var num1= 0,num2=0;
       var ctx=$('#'+Id)[0].getContext('2d');
@@ -89,7 +97,8 @@ export default {
         num1++;
         num2++;
         num1 <= num && (num2 = 0);//判断是否可以进行绘制蓝色条 不可以就令其为零
-        arc(Id, num1, num2);
+
+        arc(Id, num1, num2, ctx);
         ctx.font = '30px SimHei';
         ctx.fillStyle = '#fff';
         var wid = ctx.measureText(num2 + '%').width;
@@ -102,11 +111,13 @@ export default {
     }
 
     arcSet('Javascript');
+    arcSet('React');
+    arcSet('Vue');
     arcSet('Bootstrap');
-    arcSet('AngularJS');
     arcSet('HTML_CSS');
     arcSet('Photoshop');
     arcSet('JQuery');
+    arcSet('Zepto');
   }
 }
 </script>
