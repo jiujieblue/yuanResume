@@ -97,7 +97,6 @@ export default {
         num1++;
         num2++;
         num1 <= num && (num2 = 0);//判断是否可以进行绘制蓝色条 不可以就令其为零
-
         arc(Id, num1, num2, ctx);
         ctx.font = '30px SimHei';
         ctx.fillStyle = '#fff';
