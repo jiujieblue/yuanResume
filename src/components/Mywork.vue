@@ -21,7 +21,7 @@
           </li>
           <li>
             <a href="http://www.cookabuy.com/" target="_blank">
-              <img class="img-responsive" src="../assets/images/logo.52daf91.svg">
+              <img class="img-responsive" src="../assets/images/cookaLog.png">
             </a>
             <p>
               <span>柯咔网</span>
