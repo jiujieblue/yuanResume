@@ -13,18 +13,23 @@
                     <h4>邮箱:</h4>
                     <p>yuanbizhi_zmm@163.com <br/>
                     314763667@qq.com</p><br/>
-                    <h4>地址:</h4>
-                    <p>广州越秀区豆腐寮小区42号</p><br/>
                     <h4>电话:</h4>
                     <p>15521133168<br/>
-                        18826421373</p>
+                        18826421373</p><br/>
+                    <h4>地址:</h4>
+                    <p>广州越秀区豆腐寮小区42号</p><br/>
                 </div>
                 <div class="col-md-3 col-sm-4 col-xs-4">
                     <div class="row commenity">
                         <div class="col-md-12"><h4>社区账号:</h4></div>
-                        <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-md-4 col-sm-4 col-xs-6">
                             <a href="https://www.zhihu.com/people/76ca89032119c4023ec2e49d8cf9e644" target="_blanck">
                                 <img class="img-responsive" src="../assets/images/zhihu.png" alt="zhihu"/>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <a href="https://www.zhihu.com/people/76ca89032119c4023ec2e49d8cf9e644" target="_blanck">
+                                <img class="img-responsive" src="../assets/images/github.png" alt="zhihu"/>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-1 col-xs-2">

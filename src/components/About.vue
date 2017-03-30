@@ -10,7 +10,7 @@
             </h3>
           </div>
           <div class="col-md-6">
-            我是一位应届毕业生，性格活泼，外向，善于与人沟通，勤奋好学，在校期间担任了三年的班长职务，对于管理颇有心得；由于对web前端知识有浓厚的兴趣，大学自学了WEB前端相关的技能，有幸得以进入学校的web前端协会，对技术的进一步的加强；毕业后想挑战web前端的有关工作，就报名达内培训班，提升相关的技能。
+            本人有两年web前端编程经验，熟悉前端大部分热门框架（Vue，React，Jquery等），本人优点注重团队精神，在工作中会主动解决问题，责任心强，性格开朗，外向，广交益友，善于沟通。
           </div>
         </div>
       </div>
@@ -24,7 +24,7 @@
           <div class="col-md-6 col-sm-8">
             <h4>水利工程专业</h4>
             <p>广东水利电力职业技术学院</p>
-            <i>三年的课程</i>
+            <i>三年课程</i>
           </div>
           <div class="col-md-3 col-sm-4">
             2016年07月 毕业
@@ -35,11 +35,21 @@
             <h3>工作经历</h3>
           </div>
           <div class="col-md-6 col-sm-8">
-            <h4>水利工程监理员</h4>
-            <p>广东西江工程咨询有限公司</p>
+            <h4>前端工程师</h4>
+            <p>广州柯咔网络科技有限公司</p>
           </div>
           <div class="col-md-3 col-sm-4">
-            2015年9月--2016年3月
+            2016年-8月--2017年4月
+          </div>
+          <br/><br/><br/><br/>
+          <div class="col-md-6 col-md-offset-3 col-sm-8">
+            <h4>前端工程师</h4>
+            <p>湛江捷讯网络科技有限公司</p>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            2013年6月--2014年9月<br>
+            ~~ <br>
+            2014年6月--2015年9月
           </div>
           <br/><br/><br/><br/>
           <div class="col-md-6 col-md-offset-3 col-sm-8">
@@ -49,6 +59,14 @@
           <div class="col-md-3 col-sm-4">
             2013年11月--2015年9月
           </div>
+          <br/><br/><br/><br/>
+          <div class="col-md-6 col-md-offset-3 col-sm-8">
+            <h4>水利工程监理员</h4>
+            <p>广东西江工程咨询有限公司</p>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            2015年9月--2016年3月
+          </div>
         </div>
         <div class="row">
           <div class="col-md-2 col-md-offset-1 col-sm-12">
@@ -56,6 +74,7 @@
           </div>
           <div class="col-md-6 col-sm-8">
             <h4>优秀学生干部</h4>
+            <p>2013学年工作表现突出</p>
             <p>2015学年工作表现突出</p>
           </div>
           <div class="col-md-3 col-sm-4">
